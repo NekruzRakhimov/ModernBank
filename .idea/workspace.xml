@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f1282c44-351d-4401-8b41-e5f653144b62" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="ProjectId" id="1lDnjsU1duvpIfZ5qd9qUILKPdY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607142008965">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607142008965" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1607142004107">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607142004107" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607141995528">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607141995528" />
+    <state x="577" y="256" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607142555530">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="577" y="256" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607142555530" />
+    <state x="288" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607152225298">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="288" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607152225298" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1607142973756">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607142973756" />
+  </component>
+</project>
