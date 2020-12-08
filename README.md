@@ -1,2 +1,5 @@
-#Online Bank 
-##Take it and have entertaiment by my project
+# Online Bank 
+### (by Nekruz Rakhimov)
+## Take it and have entertaiment by my project
+> Here you can manage your profile as User or you can Logon as 
+> administrator and change some setting for your cozy

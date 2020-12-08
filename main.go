@@ -8,11 +8,13 @@ import (
 	"fmt"
 	_ "github.com/mattn/go-sqlite3"
 	"log"
+	"os"
 )
 
 const WelcomeText = `Выберите команду:
 1.Авторизация
-2.Список банкоматов`
+2.Список банкоматов
+0.Выход`
 
 func Start(database *sql.DB) {
 	fmt.Println("Добро пожаловать!")
@@ -25,6 +27,8 @@ func Start(database *sql.DB) {
 			core.Authorization(database)
 		case 2:
 			models.PrintingListOfATMs(database)
+		case 0:
+			os.Exit(0)
 		default:
 			fmt.Println("Вы ввели некоректные данные. Попробуйте ещё раз!")
 		}

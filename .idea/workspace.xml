@@ -20,8 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1282c44-351d-4401-8b41-e5f653144b62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBcopy/accounts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBcopy/atms.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBcopy/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OnlineBankingDB" beforeDir="false" afterPath="$PROJECT_DIR$/OnlineBankingDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/dbinit.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/dbinit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/ddl.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/ddl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/dml.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/dml.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/account.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/account.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/atm.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/atm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/transactionshistory.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/transactionshistory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/core/admintools.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/core/admintools.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/core/authorization.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/core/authorization.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/core/usersservices.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/core/usersservices.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +66,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../projects/go/Работа с файлами" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nekruz\go\src\OnlineBanking" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -67,16 +87,18 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607142008965">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607142008965" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1607142004107">
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1607445358349">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607142004107" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607400561143" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1607445358349" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607141995528">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

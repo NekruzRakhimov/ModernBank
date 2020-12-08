@@ -21,11 +21,9 @@ const UpadateAccount = `UPDATE accounts set id = $1, user_id = $2, system = $3, 
 
 const UpadateATM = `UPDATE atms set address = $1 where id = $2`
 
-
 const RemoveAccount = `UPDATE accounts set removed = true where id = $1`
 
 const RemoveATM = `UPDATE atms set status = false where id = $1`
-
 
 const RemoveUser = `UPDATE users set removed = true where id = $1`
 

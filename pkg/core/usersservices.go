@@ -21,7 +21,7 @@ const PublicServicesText = `Выберите услугу которую хот�
 3.Кабельное ТВ
 4.Выход`
 
-func UsersServices (database *sql.DB, User models.User) {
+func UsersServices(database *sql.DB, User models.User) {
 	for {
 		fmt.Println("		Пользователь >", User.Name, User.Surname)
 		fmt.Println(UsersServicesText)
@@ -55,7 +55,7 @@ func ShowTransactionsHistory(database *sql.DB, user models.User) {
 	if err != nil {
 		fmt.Println("Error while printing list of transactions. Error is", err)
 	}
-	fmt.Println("№",  "Номер счёта ", "Номер счёта получателя", "Сумма", "Дата", "Время")
+	fmt.Println("№", "Номер счёта ", "Номер счёта получателя", "Сумма", "Дата", "Время")
 	for rows.Next() {
 		transaction := models.TransactionHistory{}
 		err = rows.Scan(
@@ -76,7 +76,7 @@ func ShowTransactionsHistory(database *sql.DB, user models.User) {
 
 }
 
-func CheckPublicServices(account models.Account, amount int64) (status bool){
+func CheckPublicServices(account models.Account, amount int64) (status bool) {
 	status = true
 	if account.Removed == true {
 		fmt.Println("Введённый аккаунт удалён.")
@@ -142,12 +142,12 @@ func PrintingListOfAccounts(database *sql.DB, User models.User) {
 		if account.Removed == true {
 			continue
 		} else {
-			fmt.Println(account.ID, account.Amount, " ", account.Number," ",account.Currency, " ", account.System)
+			fmt.Println(account.ID, account.Amount, " ", account.Number, " ", account.Currency, " ", account.System)
 		}
 	}
 }
 
-func TransferQuestions() (amount int64, from string, to string){
+func TransferQuestions() (amount int64, from string, to string) {
 	fmt.Println("Введите номер своего счёта:")
 	fmt.Scan(&from)
 	fmt.Println("Введите номер счёта на который нужно перевести деньги:")
@@ -168,7 +168,7 @@ func SearchingAccountByNumber(database *sql.DB, number string) (Account models.A
 		&Account.Removed,
 	)
 	if err != nil {
-		fmt.Println("Error while selecting an account. Error is^",err)
+		fmt.Println("Error while selecting an account. Error is^", err)
 	}
 	return Account
 }
@@ -181,10 +181,10 @@ func CheckTransfer(amount int64, accountFrom, accountTo models.Account) (status 
 	} else if accountTo.Removed == true {
 		status = false
 		fmt.Println("Этот счёт", accountTo.Number, "удалённый")
-	} else  if accountTo.Number == "" {
+	} else if accountTo.Number == "" {
 		status = false
 		fmt.Println("Вы неправильно ввели номер счёта на который хотите перевести деньги!")
-	} else if amount > accountFrom.Amount{
+	} else if amount > accountFrom.Amount {
 		status = false
 		fmt.Println("У вас на счету недостаточно средств!")
 	}

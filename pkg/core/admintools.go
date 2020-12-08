@@ -11,28 +11,31 @@ const UserToolsText = `Выберите категорию:
 2.Счета
 3.Банкоматы
 4.История транзвкций
-5.Выход`
+0.Выход`
 
 const UsersControlText = `Выберите команду:
 1.Добавить пользователя
 2.Обновить данные о пользователе
 3.Удалить пользователя
 4.Список всех пользователей
-5.Назад`
+5.Сохранить таблицу Users в файл JSON
+0.Назад`
 
 const AccountsControlText = `Выберите команду:
 1.Добавить счёт
 2.Обновить данные о счёте
 3.Удалить счёт
 4.Список всех счетов
-5.Назад`
+5.Сохранить таблицу accounts в файл JSON
+0.Назад`
 
 const ATMsControlText = `Выберите команду:
 1.Добавить банкомат
 2.Обновить банкомат
 3.Удалить банкомат
 4.Список всех банкоматов
-5.Назад`
+5.Сохранить таблицу atms в файл JSON
+0.Назад`
 
 func AdminsTools(database *sql.DB, user models.User) {
 	for {
@@ -49,7 +52,7 @@ func AdminsTools(database *sql.DB, user models.User) {
 			ATMsControl(database)
 		case 4:
 			models.PrintingListOfTransactions(database)
-		case 5:
+		case 0:
 			return
 		default:
 			fmt.Println("Вы ввели некоректные данные. Попробуйте ещё!")
@@ -57,7 +60,7 @@ func AdminsTools(database *sql.DB, user models.User) {
 	}
 }
 
-func AddUserQuestions(database *sql.DB) (user models.User){
+func AddUserQuestions(database *sql.DB) (user models.User) {
 	fmt.Println("Заполните все поля!")
 	fmt.Println("Введите имя")
 	fmt.Scan(&user.Name)
@@ -95,7 +98,7 @@ func UpdatingUserQuestions(database *sql.DB) (user models.User, id int64) {
 	return user, id
 }
 
-func UsersControl(database *sql.DB)  {
+func UsersControl(database *sql.DB) {
 	fmt.Println(UsersControlText)
 	var cmd int64
 	fmt.Scan(&cmd)
@@ -113,14 +116,17 @@ func UsersControl(database *sql.DB)  {
 		models.RemoveUserById(database, id)
 	case 4:
 		models.PrintingListOfUsers(database)
+	case 5:
+		models.SavingUsersTableToJSON(database)
+
 	}
 }
 
-func AddAccountQuestions(database *sql.DB) (account models.Account){
+func AddAccountQuestions(database *sql.DB) (account models.Account) {
 	fmt.Println("Заполните все поля!")
 	fmt.Println("Введите ID владельца данного аккаунта")
 	fmt.Scan(&account.User_id)
-	account.Amount =  0
+	account.Amount = 0
 	fmt.Println("Введите номер сёта")
 	fmt.Scan(&account.Number)
 	fmt.Println("Введите платёжную систему счёта")
@@ -132,19 +138,19 @@ func AddAccountQuestions(database *sql.DB) (account models.Account){
 }
 
 func UpdatingAccountQuestions(database *sql.DB) (account models.Account, id int64) {
-		fmt.Println("Заполните все поля!")
-		fmt.Println("Введите ID счёта")
-		fmt.Scan(&id)
-		fmt.Println("Введите ID владельца счёта")
-		fmt.Scan(&account.User_id)
-		fmt.Println("Введите название платёжной системы счёта")
-		fmt.Scan(&account.System)
-		fmt.Println("Введите валюту счёта")
-		fmt.Scan(&account.Currency)
-		return account, id
+	fmt.Println("Заполните все поля!")
+	fmt.Println("Введите ID счёта")
+	fmt.Scan(&id)
+	fmt.Println("Введите ID владельца счёта")
+	fmt.Scan(&account.User_id)
+	fmt.Println("Введите название платёжной системы счёта")
+	fmt.Scan(&account.System)
+	fmt.Println("Введите валюту счёта")
+	fmt.Scan(&account.Currency)
+	return account, id
 }
 
-func UpdatingATMQuestions(database *sql.DB) (atm models.ATM){
+func UpdatingATMQuestions(database *sql.DB) (atm models.ATM) {
 	fmt.Println("Введите ID банкомата")
 	fmt.Scan(&atm.ID)
 	fmt.Println("Введите адрес банкомата")
@@ -170,10 +176,13 @@ func AccountsControl(database *sql.DB) {
 		models.RemoveAccountById(database, id)
 	case 4:
 		models.PrintingListOfAccounts(database)
+	case 5:
+		models.SavingAccountsTableToJSON(database)
+
 	}
 }
 
-func AddATMQuestions(database *sql.DB) (address string){
+func AddATMQuestions(database *sql.DB) (address string) {
 	fmt.Println("Введите адрес банкомата")
 	fmt.Scan(&address)
 	return address
@@ -197,5 +206,8 @@ func ATMsControl(database *sql.DB) {
 		models.RemoveATMById(database, id)
 	case 4:
 		models.PrintingListOfATMs(database)
+	case 5:
+		models.SavingATMsTableToJSON(database)
+
 	}
 }

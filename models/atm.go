@@ -3,15 +3,40 @@ package models
 import (
 	"OnlineBanking/db"
 	"database/sql"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 )
 
 type ATM struct {
-	ID int64
+	ID      int64
 	Address string
-	Status bool
+	Status  bool
 }
 
+func SavingATMsTableToJSON(database *sql.DB) {
+	var arr []ATM
+	rows, err := database.Query("select * from atms")
+	if err != nil {
+		fmt.Println("Error while printing list of atms. Error is:", err)
+	}
+	for rows.Next() {
+		atm := ATM{}
+		err = rows.Scan(&atm.ID, &atm.Address, &atm.Status)
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
+		arr = append(arr, atm)
+	}
+	bytes, err := json.Marshal(arr)
+	err = ioutil.WriteFile("DBcopy/atms.json", bytes, 6604)
+	if err != nil {
+		fmt.Println("Error is", err)
+	} else {
+		fmt.Println("Данные успешно сохранены по адресу DataBaseCopy/atms.json")
+	}
+}
 
 func AddNewATM(database *sql.DB, address string) {
 	_, err := database.Exec("INSERT INTO atms(address) values (($1))", address)
@@ -22,7 +47,7 @@ func AddNewATM(database *sql.DB, address string) {
 	}
 }
 
-func RemoveATMById(database *sql.DB, id int64) () {
+func RemoveATMById(database *sql.DB, id int64) {
 	_, err := database.Exec(db.RemoveATM, id)
 	if err != nil {
 		fmt.Println(err)
@@ -42,7 +67,7 @@ func PrintingListOfATMs(database *sql.DB) {
 		fmt.Println("Error while printing list of ATMs. Error is:", err)
 	}
 	fmt.Println("№", "Адрес:			", "Работает:")
-	for rows.Next(){
+	for rows.Next() {
 		atm := ATM{}
 		err = rows.Scan(&atm.ID, &atm.Address, &atm.Status)
 		if err != nil {
@@ -50,7 +75,7 @@ func PrintingListOfATMs(database *sql.DB) {
 			continue
 		}
 		fmt.Print(atm.ID, " ", atm.Address)
-		if(atm.Status == true) {
+		if atm.Status == true {
 			fmt.Print("	да\n")
 		} else {
 			fmt.Print("	нет\n")

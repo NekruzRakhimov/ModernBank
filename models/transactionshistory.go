@@ -8,15 +8,15 @@ import (
 )
 
 type TransactionHistory struct {
-	ID int64
+	ID        int64
 	MyAccount string
 	ToAccount string
-	Amount int64
-	Data string
-	Time string
+	Amount    int64
+	Data      string
+	Time      string
 }
 
-func AddNewTransactionHistory(database *sql.DB, myAccount, toAccount string, Amount int64,) {
+func AddNewTransactionHistory(database *sql.DB, myAccount, toAccount string, Amount int64) {
 	time := time2.Now()
 	data := time.Format("02.January.2006")
 	Time := time.Format("15:40")
@@ -31,7 +31,7 @@ func PrintingListOfTransactions(database *sql.DB) {
 	if err != nil {
 		fmt.Println("Error while printing list of transactions. Error is", err)
 	}
-	fmt.Println("№",  "Номер счёта ", "Номер счёта получателя", "Сумма", "Дата", "Время")
+	fmt.Println("№", "Номер счёта ", "Номер счёта получателя", "Сумма", "Дата", "Время")
 	for rows.Next() {
 		transaction := TransactionHistory{}
 		err = rows.Scan(
@@ -51,4 +51,3 @@ func PrintingListOfTransactions(database *sql.DB) {
 	}
 
 }
-

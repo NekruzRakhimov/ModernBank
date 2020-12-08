@@ -10,7 +10,7 @@ const AuthorizationFailedText = `Неправильный логин или па
 1.Попробовать ещё
 2.Выйти`
 
-func AskingLogin () (login, password string) {
+func AskingLogin() (login, password string) {
 	fmt.Println("Введите логин и пароль")
 	fmt.Println("Введите логин")
 	fmt.Scan(&login)
@@ -19,7 +19,7 @@ func AskingLogin () (login, password string) {
 	return
 }
 
-func SearchingUserInDB(database *sql.DB, login, password string)(User models.User) {
+func SearchingUserInDB(database *sql.DB, login, password string) (User models.User) {
 	database.QueryRow(`SELECT * FROM users WHERE login = ($1) and password = ($2)`, login, password).Scan(
 		&User.ID,
 		&User.Name,
@@ -37,7 +37,7 @@ func SearchingUserInDB(database *sql.DB, login, password string)(User models.Use
 func Authorization(database *sql.DB) {
 	login, password := AskingLogin()
 	User := SearchingUserInDB(database, login, password)
-	if User.Login == "" && User.Password == ""{
+	if User.Login == "" && User.Password == "" {
 		fmt.Println(AuthorizationFailedText)
 		var cmd int64
 		fmt.Scan(&cmd)
@@ -51,9 +51,10 @@ func Authorization(database *sql.DB) {
 		}
 	} else {
 		fmt.Println("____________________С возвращением!____________________")
-		if User.Role == "user" {
+		switch User.Role {
+		case "user":
 			UsersServices(database, User)
-		}else if User.Role == "admin" {
+		case "admin":
 			AdminsTools(database, User)
 		}
 	}
