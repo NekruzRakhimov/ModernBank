@@ -173,6 +173,7 @@
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>user</DefaultExpression>
     </column>
     <column id="45" parent="11" name="login">
       <Position>7</Position>

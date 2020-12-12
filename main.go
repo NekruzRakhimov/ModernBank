@@ -16,7 +16,7 @@ const WelcomeText = `Выберите команду:
 2.Список банкоматов
 0.Выход`
 
-func Start(database *sql.DB) {
+func WelcomeWindow(database *sql.DB) {
 	fmt.Println("Добро пожаловать!")
 	for {
 		fmt.Println(WelcomeText)
@@ -33,6 +33,10 @@ func Start(database *sql.DB) {
 			fmt.Println("Вы ввели некоректные данные. Попробуйте ещё раз!")
 		}
 	}
+}
+
+func Start(database *sql.DB) {
+	WelcomeWindow(database)
 }
 
 func main() {

@@ -20,23 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1282c44-351d-4401-8b41-e5f653144b62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DBcopy/accounts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBcopy/atms.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBcopy/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/908bcad4-9080-4be7-8eee-e8996da5dc96.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/908bcad4-9080-4be7-8eee-e8996da5dc96.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OnlineBankingDB" beforeDir="false" afterPath="$PROJECT_DIR$/OnlineBankingDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/dbinit.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/dbinit.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/ddl.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/ddl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/dml.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/dml.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/account.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/account.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/atm.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/atm.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/transactionshistory.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/transactionshistory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/core/admintools.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/core/admintools.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/core/authorization.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/core/authorization.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/core/usersservices.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/core/usersservices.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,10 +91,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607141995528" />
-    <state x="577" y="256" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607142555530">
+    <state x="577" y="256" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607794547479">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="577" y="256" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607142555530" />
+    <state x="577" y="256" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738@0.0.1366.738" timestamp="1607794547479" />
     <state x="288" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607152225298">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

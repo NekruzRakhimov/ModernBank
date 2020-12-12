@@ -6,7 +6,7 @@ const CreatingUsersTable = `Create table if not exists users(
 	surname text not null,
 	age integer not null,
 	gender text not null,
-	role text not null,
+	role text not null default user,
 	login text not null,
 	password text not null,
 	removed boolean not null default false
