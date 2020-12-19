@@ -20,11 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1282c44-351d-4401-8b41-e5f653144b62" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/908bcad4-9080-4be7-8eee-e8996da5dc96.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/908bcad4-9080-4be7-8eee-e8996da5dc96.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBcopy/xml/accounts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBcopy/xml/atms.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBcopy/xml/users.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBcopy/accounts.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBcopy/json/accounts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBcopy/atms.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBcopy/json/atms.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBcopy/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBcopy/json/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OnlineBankingDB" beforeDir="false" afterPath="$PROJECT_DIR$/OnlineBankingDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/ddl.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/ddl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/account.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/account.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/atm.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/atm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/core/admintools.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/core/admintools.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/core/usersservices.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/core/usersservices.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +62,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../projects/go/Работа с файлами" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nekruz\go\src\OnlineBanking\DBcopy\xml" />
+      <recent name="C:\Users\Nekruz\go\src\OnlineBanking\DBcopy\json" />
       <recent name="C:\Users\Nekruz\go\src\OnlineBanking" />
     </key>
   </component>
@@ -82,11 +92,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607142008965" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1607445358349">
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1608173133506">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1360.738@0.0.1366.738" timestamp="1607400561143" />
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1607445358349" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1608173133506" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1607141995528">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

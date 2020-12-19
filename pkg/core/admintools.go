@@ -19,6 +19,7 @@ const UsersControlText = `Выберите команду:
 3.Удалить пользователя
 4.Список всех пользователей
 5.Сохранить таблицу Users в файл JSON
+6.Сохранить таблицу Users в файл XML
 0.Назад`
 
 const AccountsControlText = `Выберите команду:
@@ -27,6 +28,7 @@ const AccountsControlText = `Выберите команду:
 3.Удалить счёт
 4.Список всех счетов
 5.Сохранить таблицу accounts в файл JSON
+6.Сохранить таблицу accounts в файл XML
 0.Назад`
 
 const ATMsControlText = `Выберите команду:
@@ -35,6 +37,7 @@ const ATMsControlText = `Выберите команду:
 3.Удалить банкомат
 4.Список всех банкоматов
 5.Сохранить таблицу atms в файл JSON
+6.Сохранить таблицу atms в файл XML
 0.Назад`
 
 func AdminsTools(database *sql.DB, user models.User) {
@@ -118,7 +121,8 @@ func UsersControl(database *sql.DB) {
 		models.PrintingListOfUsers(database)
 	case 5:
 		models.SavingUsersTableToJSON(database)
-
+	case 6:
+		models.SavingUsersTableToXML(database)
 	}
 }
 
@@ -178,7 +182,8 @@ func AccountsControl(database *sql.DB) {
 		models.PrintingListOfAccounts(database)
 	case 5:
 		models.SavingAccountsTableToJSON(database)
-
+	case 6:
+		models.SavingAccountsTableToXML(database)
 	}
 }
 
@@ -208,6 +213,7 @@ func ATMsControl(database *sql.DB) {
 		models.PrintingListOfATMs(database)
 	case 5:
 		models.SavingATMsTableToJSON(database)
-
+	case 6:
+		models.SavingATMsTableToXML(database)
 	}
 }

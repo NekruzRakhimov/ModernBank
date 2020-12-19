@@ -191,13 +191,32 @@ func CheckTransfer(amount int64, accountFrom, accountTo models.Account) (status 
 	return status
 }
 
-func TransferOperation(database *sql.DB, amount int64, accountFrom, accountTo models.Account) {
+func TransferOperation(database *sql.DB, amount int64, accountFrom, accountTo models.Account) (err error){
+	tx, err := database.Begin()
+	if err != nil {
+		return err
+	}
+	defer func(){
+		if err != nil {
+			_ = tx.Rollback()
+			return
+		}
+		err = tx.Commit()
+	}()
+	
 	models.AddNewTransactionHistory(database, accountFrom.Number, accountTo.Number, amount)
 	accountFrom.Amount -= amount
 	accountTo.Amount += amount
-	database.Exec(db.UpadateAccountsAmount, accountFrom.Amount, accountFrom.Number)
-	database.Exec(db.UpadateAccountsAmount, accountTo.Amount, accountTo.Number)
+	_, err = database.Exec(db.UpadateAccountsAmount, accountFrom.Amount, accountFrom.Number)
+	if err != nil {
+		fmt.Println(err)
+	}
+	_, err = database.Exec(db.UpadateAccountsAmount, accountTo.Amount, accountTo.Number)
+	if err != nil {
+		fmt.Println(err)
+	}
 	fmt.Println("Перевод совершён успешно!")
+	return err
 }
 
 func Transfer(database *sql.DB, User models.User) {

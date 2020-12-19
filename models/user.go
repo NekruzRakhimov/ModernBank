@@ -4,20 +4,55 @@ import (
 	"OnlineBanking/db"
 	"database/sql"
 	"encoding/json"
+	"encoding/xml"
 	"fmt"
 	"io/ioutil"
 )
 
 type User struct {
-	ID       int64  `json:"id"`
-	Name     string `json:"name"`
-	Surname  string `json:"surname"`
-	Age      int64  `json:"age"`
-	Gender   string `json:"gender"`
-	Role     string `json:"role"`
-	Login    string `json:"login"`
-	Password string `json:"password"`
-	Removed  bool   `json:"removed"`
+	ID       int64  `xml:"id" json:"id"`
+	Name     string `xml:"name" json:"name"`
+	Surname  string `xml:"surname" json:"surname"`
+	Age      int64  `xml:"age" json:"age"`
+	Gender   string `xml:"gender" json:"gender"`
+	Role     string `xml:"role" json:"role"`
+	Login    string `xml:"login" json:"login"`
+	Password string `xml:"password" json:"password"`
+	Removed  bool   `xml:"removed" json:"removed"`
+}
+
+func SavingUsersTableToXML(database *sql.DB) {
+	var arr []User
+	rows, err := database.Query("select * from users")
+	if err != nil {
+		fmt.Println("Error while saving list of Users to xml file. Error is:", err)
+	}
+	for rows.Next() {
+		user := User{}
+		err = rows.Scan(
+			&user.ID,
+			&user.Name,
+			&user.Surname,
+			&user.Age,
+			&user.Gender,
+			&user.Role,
+			&user.Login,
+			&user.Password,
+			&user.Removed,
+		)
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
+		arr = append(arr, user)
+	}
+	bytes, err := xml.Marshal(arr)
+	err = ioutil.WriteFile("DBcopy/xml/users.xml", bytes, 6604)
+	if err != nil {
+		fmt.Println("Error is", err)
+	} else {
+		fmt.Println("Данные успешно сохранены по адресу DataBaseCopy/xml/users.xml")
+	}
 }
 
 func SavingUsersTableToJSON(database *sql.DB) {
@@ -46,11 +81,11 @@ func SavingUsersTableToJSON(database *sql.DB) {
 		arr = append(arr, user)
 	}
 	bytes, err := json.Marshal(arr)
-	err = ioutil.WriteFile("DBcopy/users.json", bytes, 6604)
+	err = ioutil.WriteFile("DBcopy/json/users.json", bytes, 6604)
 	if err != nil {
 		fmt.Println("Error is", err)
 	} else {
-		fmt.Println("Данные успешно сохранены по адресу DataBaseCopy/users.json")
+		fmt.Println("Данные успешно сохранены по адресу DataBaseCopy/json/users.json")
 	}
 }
 
